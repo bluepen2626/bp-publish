@@ -1,0 +1,78 @@
+[2025-08-09T15:42:21.835Z] GET: https://www.blue-pen.jp/wp-json/wp/v2/id_info?per_page=100&page=1&status=any&context=edit&acf_format=standard&_=1754754141835
+[2025-08-09T15:42:23.454Z] 🔢 page 1: 100件
+[2025-08-09T15:42:23.455Z] 📦 総取得: 100
+[2025-08-09T15:42:23.455Z] ✅ agreement=true: 4
+[2025-08-09T15:42:23.459Z] 📁 旧データをバックアップ: fetched.json.bak
+[2025-08-09T15:42:23.462Z] 📝 保存完了: fetched.json（25970 文字）
+[2025-08-09T16:00:13.658Z] GET: https://www.blue-pen.jp/wp-json/wp/v2/id_info?per_page=100&page=1&status=any&context=edit&acf_format=standard&_=1754755213658
+[2025-08-09T16:00:17.805Z] 🔢 page 1: 100件
+[2025-08-09T16:00:17.805Z] 📦 総取得: 100
+[2025-08-09T16:00:17.805Z] ✅ agreement=true: 4
+[2025-08-09T16:00:18.307Z] 📁 旧データをバックアップ: fetched.json.bak
+[2025-08-09T16:00:18.584Z] 📝 保存完了: fetched.json（25970 文字）
+[2025-08-09T18:00:17.490Z] GET: https://www.blue-pen.jp/wp-json/wp/v2/id_info?per_page=100&page=1&status=any&context=edit&acf_format=standard&_=1754762417489
+[2025-08-09T18:00:21.825Z] 🔢 page 1: 100件
+[2025-08-09T18:00:21.826Z] 📦 総取得: 100
+[2025-08-09T18:00:21.826Z] ✅ agreement=true: 4
+[2025-08-09T18:00:21.834Z] 📁 旧データをバックアップ: fetched.json.bak
+[2025-08-09T18:00:21.837Z] 📝 保存完了: fetched.json（25970 文字）
+[2025-08-09T20:00:22.403Z] GET: https://www.blue-pen.jp/wp-json/wp/v2/id_info?per_page=100&page=1&status=any&context=edit&acf_format=standard&_=1754769622403
+[2025-08-09T20:00:27.861Z] 🔢 page 1: 100件
+[2025-08-09T20:00:27.861Z] 📦 総取得: 100
+[2025-08-09T20:00:27.861Z] ✅ agreement=true: 4
+[2025-08-09T20:00:27.869Z] 📁 旧データをバックアップ: fetched.json.bak
+[2025-08-09T20:00:27.872Z] 📝 保存完了: fetched.json（25970 文字）
+[2025-08-09T22:00:16.573Z] GET: https://www.blue-pen.jp/wp-json/wp/v2/id_info?per_page=100&page=1&status=any&context=edit&acf_format=standard&_=1754776816573
+[2025-08-09T22:00:22.967Z] 🔢 page 1: 100件
+[2025-08-09T22:00:22.968Z] 📦 総取得: 100
+[2025-08-09T22:00:22.968Z] ✅ agreement=true: 4
+[2025-08-09T22:00:22.976Z] 📁 旧データをバックアップ: fetched.json.bak
+[2025-08-09T22:00:22.979Z] 📝 保存完了: fetched.json（25970 文字）
+[2025-08-10T00:00:34.268Z] GET: https://www.blue-pen.jp/wp-json/wp/v2/id_info?per_page=100&page=1&status=any&context=edit&acf_format=standard&_=1754784034268
+[2025-08-10T00:00:38.287Z] 🔢 page 1: 100件
+[2025-08-10T00:00:38.287Z] 📦 総取得: 100
+[2025-08-10T00:00:38.287Z] ✅ agreement=true: 4
+[2025-08-10T00:00:38.296Z] 📁 旧データをバックアップ: fetched.json.bak
+[2025-08-10T00:00:38.299Z] 📝 保存完了: fetched.json（25970 文字）
+[2025-08-10T02:00:17.848Z] GET: https://www.blue-pen.jp/wp-json/wp/v2/id_info?per_page=100&page=1&status=any&context=edit&acf_format=standard&_=1754791217848
+[2025-08-10T02:00:22.252Z] 🔢 page 1: 100件
+[2025-08-10T02:00:22.252Z] 📦 総取得: 100
+[2025-08-10T02:00:22.252Z] ✅ agreement=true: 4
+[2025-08-10T02:00:22.260Z] 📁 旧データをバックアップ: fetched.json.bak
+[2025-08-10T02:00:22.263Z] 📝 保存完了: fetched.json（25970 文字）
+[2025-08-10T04:00:20.432Z] GET: https://www.blue-pen.jp/wp-json/wp/v2/id_info?per_page=100&page=1&status=any&context=edit&acf_format=standard&_=1754798420432
+[2025-08-10T04:00:21.835Z] 🔢 page 1: 100件
+[2025-08-10T04:00:21.835Z] 📦 総取得: 100
+[2025-08-10T04:00:21.835Z] ✅ agreement=true: 4
+[2025-08-10T04:00:21.844Z] 📁 旧データをバックアップ: fetched.json.bak
+[2025-08-10T04:00:21.847Z] 📝 保存完了: fetched.json（25970 文字）
+[2025-08-10T06:00:31.040Z] GET: https://www.blue-pen.jp/wp-json/wp/v2/id_info?per_page=100&page=1&status=any&context=edit&acf_format=standard&_=1754805631040
+[2025-08-10T06:00:35.019Z] 🔢 page 1: 100件
+[2025-08-10T06:00:35.019Z] 📦 総取得: 100
+[2025-08-10T06:00:35.019Z] ✅ agreement=true: 4
+[2025-08-10T06:00:35.027Z] 📁 旧データをバックアップ: fetched.json.bak
+[2025-08-10T06:00:35.030Z] 📝 保存完了: fetched.json（25970 文字）
+[2025-08-10T08:00:20.547Z] GET: https://www.blue-pen.jp/wp-json/wp/v2/id_info?per_page=100&page=1&status=any&context=edit&acf_format=standard&_=1754812820547
+[2025-08-10T08:00:24.592Z] 🔢 page 1: 100件
+[2025-08-10T08:00:24.592Z] 📦 総取得: 100
+[2025-08-10T08:00:24.593Z] ✅ agreement=true: 4
+[2025-08-10T08:00:24.599Z] 📁 旧データをバックアップ: fetched.json.bak
+[2025-08-10T08:00:24.602Z] 📝 保存完了: fetched.json（25970 文字）
+[2025-08-10T10:00:19.927Z] GET: https://www.blue-pen.jp/wp-json/wp/v2/id_info?per_page=100&page=1&status=any&context=edit&acf_format=standard&_=1754820019926
+[2025-08-10T10:00:24.553Z] 🔢 page 1: 100件
+[2025-08-10T10:00:24.554Z] 📦 総取得: 100
+[2025-08-10T10:00:24.554Z] ✅ agreement=true: 4
+[2025-08-10T10:00:24.562Z] 📁 旧データをバックアップ: fetched.json.bak
+[2025-08-10T10:00:24.566Z] 📝 保存完了: fetched.json（25970 文字）
+[2025-08-10T12:00:20.195Z] GET: https://www.blue-pen.jp/wp-json/wp/v2/id_info?per_page=100&page=1&status=any&context=edit&acf_format=standard&_=1754827220195
+[2025-08-10T12:00:24.115Z] 🔢 page 1: 100件
+[2025-08-10T12:00:24.115Z] 📦 総取得: 100
+[2025-08-10T12:00:24.116Z] ✅ agreement=true: 4
+[2025-08-10T12:00:24.130Z] 📁 旧データをバックアップ: fetched.json.bak
+[2025-08-10T12:00:24.134Z] 📝 保存完了: fetched.json（25970 文字）
+[2025-08-10T14:00:19.871Z] GET: https://www.blue-pen.jp/wp-json/wp/v2/id_info?per_page=100&page=1&status=any&context=edit&acf_format=standard&_=1754834419871
+[2025-08-10T14:00:23.948Z] 🔢 page 1: 100件
+[2025-08-10T14:00:23.949Z] 📦 総取得: 100
+[2025-08-10T14:00:23.949Z] ✅ agreement=true: 4
+[2025-08-10T14:00:23.958Z] 📁 旧データをバックアップ: fetched.json.bak
+[2025-08-10T14:00:23.962Z] 📝 保存完了: fetched.json（25970 文字）

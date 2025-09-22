@@ -1,0 +1,870 @@
+[
+  {
+    "id": 1490,
+    "date": "2025-08-05T00:35:18",
+    "date_gmt": "2025-08-04T15:35:18",
+    "guid": {
+      "rendered": "https://www.blue-pen.jp/id_info/000004",
+      "raw": "https://www.blue-pen.jp/id_info/000004"
+    },
+    "modified": "2025-08-09T01:43:01",
+    "modified_gmt": "2025-08-08T16:43:01",
+    "password": "",
+    "slug": "000004",
+    "status": "private",
+    "type": "id_info",
+    "link": "https://www.blue-pen.jp/id_info/000004",
+    "title": {
+      "raw": "000004",
+      "rendered": "000004"
+    },
+    "content": {
+      "raw": "",
+      "rendered": "",
+      "protected": false,
+      "block_version": 0
+    },
+    "template": "",
+    "meta": {
+      "_acf_changed": true,
+      "site-sidebar-layout": "default",
+      "site-content-layout": "",
+      "ast-site-content-layout": "default",
+      "site-content-style": "default",
+      "site-sidebar-style": "default",
+      "ast-global-header-display": "",
+      "ast-banner-title-visibility": "",
+      "ast-main-header-display": "",
+      "ast-hfb-above-header-display": "",
+      "ast-hfb-below-header-display": "",
+      "ast-hfb-mobile-header-display": "",
+      "site-post-title": "",
+      "ast-breadcrumbs-content": "",
+      "ast-featured-img": "",
+      "footer-sml-layout": "",
+      "theme-transparent-header-meta": "",
+      "adv-header-id-meta": "",
+      "stick-header-meta": "",
+      "header-above-stick-meta": "",
+      "header-main-stick-meta": "",
+      "header-below-stick-meta": "",
+      "astra-migrate-meta-layouts": "default",
+      "ast-page-background-enabled": "default",
+      "ast-page-background-meta": {
+        "desktop": {
+          "background-color": "var(--ast-global-color-5)",
+          "background-image": "",
+          "background-repeat": "repeat",
+          "background-position": "center center",
+          "background-size": "auto",
+          "background-attachment": "scroll",
+          "background-type": "",
+          "background-media": "",
+          "overlay-type": "",
+          "overlay-color": "",
+          "overlay-opacity": "",
+          "overlay-gradient": ""
+        },
+        "tablet": {
+          "background-color": "",
+          "background-image": "",
+          "background-repeat": "repeat",
+          "background-position": "center center",
+          "background-size": "auto",
+          "background-attachment": "scroll",
+          "background-type": "",
+          "background-media": "",
+          "overlay-type": "",
+          "overlay-color": "",
+          "overlay-opacity": "",
+          "overlay-gradient": ""
+        },
+        "mobile": {
+          "background-color": "",
+          "background-image": "",
+          "background-repeat": "repeat",
+          "background-position": "center center",
+          "background-size": "auto",
+          "background-attachment": "scroll",
+          "background-type": "",
+          "background-media": "",
+          "overlay-type": "",
+          "overlay-color": "",
+          "overlay-opacity": "",
+          "overlay-gradient": ""
+        }
+      },
+      "ast-content-background-meta": {
+        "desktop": {
+          "background-color": "var(--ast-global-color-4)",
+          "background-image": "",
+          "background-repeat": "repeat",
+          "background-position": "center center",
+          "background-size": "auto",
+          "background-attachment": "scroll",
+          "background-type": "",
+          "background-media": "",
+          "overlay-type": "",
+          "overlay-color": "",
+          "overlay-opacity": "",
+          "overlay-gradient": ""
+        },
+        "tablet": {
+          "background-color": "var(--ast-global-color-4)",
+          "background-image": "",
+          "background-repeat": "repeat",
+          "background-position": "center center",
+          "background-size": "auto",
+          "background-attachment": "scroll",
+          "background-type": "",
+          "background-media": "",
+          "overlay-type": "",
+          "overlay-color": "",
+          "overlay-opacity": "",
+          "overlay-gradient": ""
+        },
+        "mobile": {
+          "background-color": "var(--ast-global-color-4)",
+          "background-image": "",
+          "background-repeat": "repeat",
+          "background-position": "center center",
+          "background-size": "auto",
+          "background-attachment": "scroll",
+          "background-type": "",
+          "background-media": "",
+          "overlay-type": "",
+          "overlay-color": "",
+          "overlay-opacity": "",
+          "overlay-gradient": ""
+        }
+      }
+    },
+    "permalink_template": "https://www.blue-pen.jp/id_info/%pagename%",
+    "generated_slug": "000004",
+    "class_list": [
+      "post-1490",
+      "id_info",
+      "type-id_info",
+      "status-private",
+      "hentry"
+    ],
+    "acf": {
+      "id_code": "000004",
+      "random_url_code": "n5xfrvj1bch8liujtd44fgmr",
+      "agreement": true,
+      "use_case": "placeholder",
+      "last_name_hira": "いとう",
+      "first_name_hira": "ひろし",
+      "name_display_format": "both_initial",
+      "birthdate": "2022-01-01",
+      "has_allergy": "なし",
+      "has_disease": "なし",
+      "emergency_contact": "080-6411-5766",
+      "user_email": "ag.no.ado@gmail.com",
+      "user_password": "a",
+      "allow_edit": false,
+      "allow_color_edit": false,
+      "rendered": false
+    },
+    "jetpack_sharing_enabled": true,
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.blue-pen.jp/wp-json/wp/v2/id_info/1490",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.blue-pen.jp/wp-json/wp/v2/id_info"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.blue-pen.jp/wp-json/wp/v2/types/id_info"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://www.blue-pen.jp/wp-json/wp/v2/media?parent=1490"
+        }
+      ],
+      "wp:action-publish": [
+        {
+          "href": "https://www.blue-pen.jp/wp-json/wp/v2/id_info/1490"
+        }
+      ],
+      "wp:action-unfiltered-html": [
+        {
+          "href": "https://www.blue-pen.jp/wp-json/wp/v2/id_info/1490"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1489,
+    "date": "2025-08-05T00:35:18",
+    "date_gmt": "2025-08-04T15:35:18",
+    "guid": {
+      "rendered": "https://www.blue-pen.jp/id_info/000003",
+      "raw": "https://www.blue-pen.jp/id_info/000003"
+    },
+    "modified": "2025-08-09T01:25:13",
+    "modified_gmt": "2025-08-08T16:25:13",
+    "password": "",
+    "slug": "000003",
+    "status": "private",
+    "type": "id_info",
+    "link": "https://www.blue-pen.jp/id_info/000003",
+    "title": {
+      "raw": "000003",
+      "rendered": "000003"
+    },
+    "content": {
+      "raw": "",
+      "rendered": "",
+      "protected": false,
+      "block_version": 0
+    },
+    "template": "",
+    "meta": {
+      "_acf_changed": true,
+      "site-sidebar-layout": "default",
+      "site-content-layout": "",
+      "ast-site-content-layout": "default",
+      "site-content-style": "default",
+      "site-sidebar-style": "default",
+      "ast-global-header-display": "",
+      "ast-banner-title-visibility": "",
+      "ast-main-header-display": "",
+      "ast-hfb-above-header-display": "",
+      "ast-hfb-below-header-display": "",
+      "ast-hfb-mobile-header-display": "",
+      "site-post-title": "",
+      "ast-breadcrumbs-content": "",
+      "ast-featured-img": "",
+      "footer-sml-layout": "",
+      "theme-transparent-header-meta": "",
+      "adv-header-id-meta": "",
+      "stick-header-meta": "",
+      "header-above-stick-meta": "",
+      "header-main-stick-meta": "",
+      "header-below-stick-meta": "",
+      "astra-migrate-meta-layouts": "default",
+      "ast-page-background-enabled": "default",
+      "ast-page-background-meta": {
+        "desktop": {
+          "background-color": "var(--ast-global-color-5)",
+          "background-image": "",
+          "background-repeat": "repeat",
+          "background-position": "center center",
+          "background-size": "auto",
+          "background-attachment": "scroll",
+          "background-type": "",
+          "background-media": "",
+          "overlay-type": "",
+          "overlay-color": "",
+          "overlay-opacity": "",
+          "overlay-gradient": ""
+        },
+        "tablet": {
+          "background-color": "",
+          "background-image": "",
+          "background-repeat": "repeat",
+          "background-position": "center center",
+          "background-size": "auto",
+          "background-attachment": "scroll",
+          "background-type": "",
+          "background-media": "",
+          "overlay-type": "",
+          "overlay-color": "",
+          "overlay-opacity": "",
+          "overlay-gradient": ""
+        },
+        "mobile": {
+          "background-color": "",
+          "background-image": "",
+          "background-repeat": "repeat",
+          "background-position": "center center",
+          "background-size": "auto",
+          "background-attachment": "scroll",
+          "background-type": "",
+          "background-media": "",
+          "overlay-type": "",
+          "overlay-color": "",
+          "overlay-opacity": "",
+          "overlay-gradient": ""
+        }
+      },
+      "ast-content-background-meta": {
+        "desktop": {
+          "background-color": "var(--ast-global-color-4)",
+          "background-image": "",
+          "background-repeat": "repeat",
+          "background-position": "center center",
+          "background-size": "auto",
+          "background-attachment": "scroll",
+          "background-type": "",
+          "background-media": "",
+          "overlay-type": "",
+          "overlay-color": "",
+          "overlay-opacity": "",
+          "overlay-gradient": ""
+        },
+        "tablet": {
+          "background-color": "var(--ast-global-color-4)",
+          "background-image": "",
+          "background-repeat": "repeat",
+          "background-position": "center center",
+          "background-size": "auto",
+          "background-attachment": "scroll",
+          "background-type": "",
+          "background-media": "",
+          "overlay-type": "",
+          "overlay-color": "",
+          "overlay-opacity": "",
+          "overlay-gradient": ""
+        },
+        "mobile": {
+          "background-color": "var(--ast-global-color-4)",
+          "background-image": "",
+          "background-repeat": "repeat",
+          "background-position": "center center",
+          "background-size": "auto",
+          "background-attachment": "scroll",
+          "background-type": "",
+          "background-media": "",
+          "overlay-type": "",
+          "overlay-color": "",
+          "overlay-opacity": "",
+          "overlay-gradient": ""
+        }
+      }
+    },
+    "permalink_template": "https://www.blue-pen.jp/id_info/%pagename%",
+    "generated_slug": "000003",
+    "class_list": [
+      "post-1489",
+      "id_info",
+      "type-id_info",
+      "status-private",
+      "hentry"
+    ],
+    "acf": {
+      "id_code": "000003",
+      "random_url_code": "4u240qo2bp3inuos4bfnfqp3",
+      "agreement": true,
+      "use_case": "placeholder",
+      "last_name_hira": "やまだ",
+      "first_name_hira": "たろう",
+      "name_display_format": "both_initial",
+      "birthdate": "1988-05-05",
+      "has_allergy": "犬",
+      "has_disease": "5月病",
+      "emergency_contact": "080-6411-5766",
+      "user_email": "ag.no.ado@gmail.com",
+      "user_password": "a",
+      "allow_edit": false,
+      "allow_color_edit": false,
+      "rendered": false
+    },
+    "jetpack_sharing_enabled": true,
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.blue-pen.jp/wp-json/wp/v2/id_info/1489",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.blue-pen.jp/wp-json/wp/v2/id_info"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.blue-pen.jp/wp-json/wp/v2/types/id_info"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://www.blue-pen.jp/wp-json/wp/v2/media?parent=1489"
+        }
+      ],
+      "wp:action-publish": [
+        {
+          "href": "https://www.blue-pen.jp/wp-json/wp/v2/id_info/1489"
+        }
+      ],
+      "wp:action-unfiltered-html": [
+        {
+          "href": "https://www.blue-pen.jp/wp-json/wp/v2/id_info/1489"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1487,
+    "date": "2025-08-05T00:35:18",
+    "date_gmt": "2025-08-04T15:35:18",
+    "guid": {
+      "rendered": "https://www.blue-pen.jp/id_info/000001",
+      "raw": "https://www.blue-pen.jp/id_info/000001"
+    },
+    "modified": "2025-08-09T00:33:30",
+    "modified_gmt": "2025-08-08T15:33:30",
+    "password": "",
+    "slug": "000001",
+    "status": "private",
+    "type": "id_info",
+    "link": "https://www.blue-pen.jp/id_info/000001",
+    "title": {
+      "raw": "000001",
+      "rendered": "000001"
+    },
+    "content": {
+      "raw": "",
+      "rendered": "",
+      "protected": false,
+      "block_version": 0
+    },
+    "template": "",
+    "meta": {
+      "_acf_changed": true,
+      "site-sidebar-layout": "default",
+      "site-content-layout": "",
+      "ast-site-content-layout": "default",
+      "site-content-style": "default",
+      "site-sidebar-style": "default",
+      "ast-global-header-display": "",
+      "ast-banner-title-visibility": "",
+      "ast-main-header-display": "",
+      "ast-hfb-above-header-display": "",
+      "ast-hfb-below-header-display": "",
+      "ast-hfb-mobile-header-display": "",
+      "site-post-title": "",
+      "ast-breadcrumbs-content": "",
+      "ast-featured-img": "",
+      "footer-sml-layout": "",
+      "theme-transparent-header-meta": "",
+      "adv-header-id-meta": "",
+      "stick-header-meta": "",
+      "header-above-stick-meta": "",
+      "header-main-stick-meta": "",
+      "header-below-stick-meta": "",
+      "astra-migrate-meta-layouts": "default",
+      "ast-page-background-enabled": "default",
+      "ast-page-background-meta": {
+        "desktop": {
+          "background-color": "var(--ast-global-color-5)",
+          "background-image": "",
+          "background-repeat": "repeat",
+          "background-position": "center center",
+          "background-size": "auto",
+          "background-attachment": "scroll",
+          "background-type": "",
+          "background-media": "",
+          "overlay-type": "",
+          "overlay-color": "",
+          "overlay-opacity": "",
+          "overlay-gradient": ""
+        },
+        "tablet": {
+          "background-color": "",
+          "background-image": "",
+          "background-repeat": "repeat",
+          "background-position": "center center",
+          "background-size": "auto",
+          "background-attachment": "scroll",
+          "background-type": "",
+          "background-media": "",
+          "overlay-type": "",
+          "overlay-color": "",
+          "overlay-opacity": "",
+          "overlay-gradient": ""
+        },
+        "mobile": {
+          "background-color": "",
+          "background-image": "",
+          "background-repeat": "repeat",
+          "background-position": "center center",
+          "background-size": "auto",
+          "background-attachment": "scroll",
+          "background-type": "",
+          "background-media": "",
+          "overlay-type": "",
+          "overlay-color": "",
+          "overlay-opacity": "",
+          "overlay-gradient": ""
+        }
+      },
+      "ast-content-background-meta": {
+        "desktop": {
+          "background-color": "var(--ast-global-color-4)",
+          "background-image": "",
+          "background-repeat": "repeat",
+          "background-position": "center center",
+          "background-size": "auto",
+          "background-attachment": "scroll",
+          "background-type": "",
+          "background-media": "",
+          "overlay-type": "",
+          "overlay-color": "",
+          "overlay-opacity": "",
+          "overlay-gradient": ""
+        },
+        "tablet": {
+          "background-color": "var(--ast-global-color-4)",
+          "background-image": "",
+          "background-repeat": "repeat",
+          "background-position": "center center",
+          "background-size": "auto",
+          "background-attachment": "scroll",
+          "background-type": "",
+          "background-media": "",
+          "overlay-type": "",
+          "overlay-color": "",
+          "overlay-opacity": "",
+          "overlay-gradient": ""
+        },
+        "mobile": {
+          "background-color": "var(--ast-global-color-4)",
+          "background-image": "",
+          "background-repeat": "repeat",
+          "background-position": "center center",
+          "background-size": "auto",
+          "background-attachment": "scroll",
+          "background-type": "",
+          "background-media": "",
+          "overlay-type": "",
+          "overlay-color": "",
+          "overlay-opacity": "",
+          "overlay-gradient": ""
+        }
+      }
+    },
+    "permalink_template": "https://www.blue-pen.jp/id_info/%pagename%",
+    "generated_slug": "000001",
+    "class_list": [
+      "post-1487",
+      "id_info",
+      "type-id_info",
+      "status-private",
+      "hentry"
+    ],
+    "acf": {
+      "id_code": "000001",
+      "random_url_code": "gobaz7fbb62kvfmj1u65c64y",
+      "agreement": true,
+      "use_case": "placeholder",
+      "last_name_hira": "やまだ",
+      "first_name_hira": "たろう",
+      "name_display_format": "last_initial",
+      "birthdate": "2025-08-06",
+      "has_allergy": "",
+      "has_disease": "",
+      "emergency_contact": "",
+      "user_email": "ag.no.ado@gmail.com",
+      "user_password": "a",
+      "allow_edit": false,
+      "allow_color_edit": false,
+      "rendered": false
+    },
+    "jetpack_sharing_enabled": true,
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.blue-pen.jp/wp-json/wp/v2/id_info/1487",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.blue-pen.jp/wp-json/wp/v2/id_info"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.blue-pen.jp/wp-json/wp/v2/types/id_info"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://www.blue-pen.jp/wp-json/wp/v2/media?parent=1487"
+        }
+      ],
+      "wp:action-publish": [
+        {
+          "href": "https://www.blue-pen.jp/wp-json/wp/v2/id_info/1487"
+        }
+      ],
+      "wp:action-unfiltered-html": [
+        {
+          "href": "https://www.blue-pen.jp/wp-json/wp/v2/id_info/1487"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1486,
+    "date": "2025-08-05T00:35:18",
+    "date_gmt": "2025-08-04T15:35:18",
+    "guid": {
+      "rendered": "https://www.blue-pen.jp/id_info/000000",
+      "raw": "https://www.blue-pen.jp/id_info/000000"
+    },
+    "modified": "2025-08-09T00:26:52",
+    "modified_gmt": "2025-08-08T15:26:52",
+    "password": "",
+    "slug": "000000",
+    "status": "private",
+    "type": "id_info",
+    "link": "https://www.blue-pen.jp/id_info/000000",
+    "title": {
+      "raw": "000000",
+      "rendered": "000000"
+    },
+    "content": {
+      "raw": "",
+      "rendered": "",
+      "protected": false,
+      "block_version": 0
+    },
+    "template": "",
+    "meta": {
+      "_acf_changed": true,
+      "site-sidebar-layout": "default",
+      "site-content-layout": "",
+      "ast-site-content-layout": "default",
+      "site-content-style": "default",
+      "site-sidebar-style": "default",
+      "ast-global-header-display": "",
+      "ast-banner-title-visibility": "",
+      "ast-main-header-display": "",
+      "ast-hfb-above-header-display": "",
+      "ast-hfb-below-header-display": "",
+      "ast-hfb-mobile-header-display": "",
+      "site-post-title": "",
+      "ast-breadcrumbs-content": "",
+      "ast-featured-img": "",
+      "footer-sml-layout": "",
+      "theme-transparent-header-meta": "",
+      "adv-header-id-meta": "",
+      "stick-header-meta": "",
+      "header-above-stick-meta": "",
+      "header-main-stick-meta": "",
+      "header-below-stick-meta": "",
+      "astra-migrate-meta-layouts": "default",
+      "ast-page-background-enabled": "default",
+      "ast-page-background-meta": {
+        "desktop": {
+          "background-color": "var(--ast-global-color-5)",
+          "background-image": "",
+          "background-repeat": "repeat",
+          "background-position": "center center",
+          "background-size": "auto",
+          "background-attachment": "scroll",
+          "background-type": "",
+          "background-media": "",
+          "overlay-type": "",
+          "overlay-color": "",
+          "overlay-opacity": "",
+          "overlay-gradient": ""
+        },
+        "tablet": {
+          "background-color": "",
+          "background-image": "",
+          "background-repeat": "repeat",
+          "background-position": "center center",
+          "background-size": "auto",
+          "background-attachment": "scroll",
+          "background-type": "",
+          "background-media": "",
+          "overlay-type": "",
+          "overlay-color": "",
+          "overlay-opacity": "",
+          "overlay-gradient": ""
+        },
+        "mobile": {
+          "background-color": "",
+          "background-image": "",
+          "background-repeat": "repeat",
+          "background-position": "center center",
+          "background-size": "auto",
+          "background-attachment": "scroll",
+          "background-type": "",
+          "background-media": "",
+          "overlay-type": "",
+          "overlay-color": "",
+          "overlay-opacity": "",
+          "overlay-gradient": ""
+        }
+      },
+      "ast-content-background-meta": {
+        "desktop": {
+          "background-color": "var(--ast-global-color-4)",
+          "background-image": "",
+          "background-repeat": "repeat",
+          "background-position": "center center",
+          "background-size": "auto",
+          "background-attachment": "scroll",
+          "background-type": "",
+          "background-media": "",
+          "overlay-type": "",
+          "overlay-color": "",
+          "overlay-opacity": "",
+          "overlay-gradient": ""
+        },
+        "tablet": {
+          "background-color": "var(--ast-global-color-4)",
+          "background-image": "",
+          "background-repeat": "repeat",
+          "background-position": "center center",
+          "background-size": "auto",
+          "background-attachment": "scroll",
+          "background-type": "",
+          "background-media": "",
+          "overlay-type": "",
+          "overlay-color": "",
+          "overlay-opacity": "",
+          "overlay-gradient": ""
+        },
+        "mobile": {
+          "background-color": "var(--ast-global-color-4)",
+          "background-image": "",
+          "background-repeat": "repeat",
+          "background-position": "center center",
+          "background-size": "auto",
+          "background-attachment": "scroll",
+          "background-type": "",
+          "background-media": "",
+          "overlay-type": "",
+          "overlay-color": "",
+          "overlay-opacity": "",
+          "overlay-gradient": ""
+        }
+      }
+    },
+    "permalink_template": "https://www.blue-pen.jp/id_info/%pagename%",
+    "generated_slug": "000000",
+    "class_list": [
+      "post-1486",
+      "id_info",
+      "type-id_info",
+      "status-private",
+      "hentry"
+    ],
+    "acf": {
+      "id_code": "000000",
+      "random_url_code": "00oq45zm6gh6jmw7d0ubu1zl",
+      "agreement": true,
+      "use_case": "placeholder",
+      "last_name_hira": "やまだ",
+      "first_name_hira": "たろう",
+      "name_display_format": "last_initial",
+      "birthdate": "2025-01-01",
+      "has_allergy": "aaa",
+      "has_disease": "aa",
+      "emergency_contact": "080-6411-5768",
+      "user_email": "ag.no.ado@gmail.com",
+      "user_password": "a",
+      "allow_edit": false,
+      "allow_color_edit": false,
+      "rendered": false
+    },
+    "jetpack_sharing_enabled": true,
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.blue-pen.jp/wp-json/wp/v2/id_info/1486",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.blue-pen.jp/wp-json/wp/v2/id_info"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.blue-pen.jp/wp-json/wp/v2/types/id_info"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://www.blue-pen.jp/wp-json/wp/v2/media?parent=1486"
+        }
+      ],
+      "wp:action-publish": [
+        {
+          "href": "https://www.blue-pen.jp/wp-json/wp/v2/id_info/1486"
+        }
+      ],
+      "wp:action-unfiltered-html": [
+        {
+          "href": "https://www.blue-pen.jp/wp-json/wp/v2/id_info/1486"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]

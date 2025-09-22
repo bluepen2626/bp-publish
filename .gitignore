@@ -1,0 +1,27 @@
+# ── 環境変数（絶対コミットしない）
+.env
+.env.local
+.env.*.local
+
+# ── 出力されたHTML：追跡する（明示的に許可）
+!output/
+!output/*.html
+
+# ── 差分用JSON：追跡する（デバッグ/証跡用）
+!data/
+!data/*.json
+
+# ── 差分出力フォルダ：基本無視、ただしHTMLだけは許可
+output-diff/*
+!output-diff/*.html
+# ※ output-diff のサブフォルダ深い階層も許可したい場合は下記に変更
+# !output-diff/**/*.html
+
+# ── 再構築可能な依存物
+node_modules/
+
+# ── OS・IDEごとの一時ファイル
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

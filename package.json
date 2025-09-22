@@ -1,0 +1,22 @@
+{
+  "name": "render-project",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=18.0.0" },
+  "scripts": {
+    "start": "node scripts/main.mjs",
+    "build": "node scripts/main.mjs build",
+    "fetch": "node scripts/main.mjs fetch",
+    "diag": "node scripts/diag.mjs",
+    "ph": "node scripts/force-placeholder.mjs",
+    "ph:run": "npm run ph && npm run build",
+    "start:ph": "cross-env GEN_PLACEHOLDER=1 node scripts/main.mjs",
+    "build:ph": "cross-env GEN_PLACEHOLDER=1 node scripts/main.mjs build",
+    "limit50": "cross-env PLACEHOLDER_LIMIT=50 node scripts/main.mjs"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "node-fetch": "^3.3.2"
+  }
+}
