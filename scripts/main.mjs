@@ -1,11 +1,5 @@
 // scripts/main.mjs — placeholder-all 恒常化版
 // fetch → diff → generate → reflect
-// 追加点:
-//  - MODE に fetch/diff/generate/reflect/build/all をすべて対応（以前の「無視」問題を解消）
-//  - 差分0でも PLACEHOLDER_ALL=1 または BUILD_ALL_WHEN_NO_DIFF=1 で previous.json 全件を diff として採用
-//  - 原子的書き込み(atomicWrite)で diff.json/previous.json のレースを回避
-//  - GitHub Contents API 直 push (USE_GH_API=1) は従来通り
-
 import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -14,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname  = path.dirname(__filename);
 
 // ===== fingerprint =====
-const VERSION = "main.mjs v2025-09-23a"; // bump for deploy check
+const VERSION = "main.mjs v2025-09-23a";
 console.log("[main] version:", VERSION);
 
 // ===== helpers =====
@@ -24,13 +18,11 @@ async function readJSON(p, fallback = null) {
   try { return JSON.parse(await fs.readFile(p, "utf8")); }
   catch { return fallback; }
 }
-// 原子的に書き込む（途中読みを防ぐ）
 async function atomicWrite(p, content) {
   const tmp = p + `.tmp-${Date.now()}-${process.pid}`;
   await fs.writeFile(tmp, typeof content === "string" ? content : JSON.stringify(content, null, 2), "utf8");
   await fs.rename(tmp, p);
 }
-
 function parseIdFilter() {
   const one = (process.env.ONLY_ID  || "").trim();
   const many = (process.env.ONLY_IDS || "").trim();
@@ -46,7 +38,7 @@ const argMode = (process.argv[2] || "").toLowerCase();
 const envMode = (process.env.MODE || "").toLowerCase();
 const MODE = validModes.has(argMode) ? argMode : (validModes.has(envMode) ? envMode : "all");
 
-// 後方互換: BUILD_ALL_WHEN_NO_DIFF=1 でも PLACEHOLDER_ALL=1 と同義にする
+// 後方互換: BUILD_ALL_WHEN_NO_DIFF=1 でも PLACEHOLDER_ALL=1 と同義
 const PLACEHOLDER_ALL = (process.env.PLACEHOLDER_ALL === "1") || (process.env.BUILD_ALL_WHEN_NO_DIFF === "1");
 
 // ===== paths =====
@@ -54,11 +46,11 @@ const DATA_DIR    = path.resolve(__dirname, "..", "data");
 const OUT_DIR     = path.resolve(__dirname, "..", "output");
 const SKIP_FLAG   = path.join(DATA_DIR, "skip.flag");
 const DIFF_JSON   = path.join(DATA_DIR, "diff.json");
-const FETCHED     = path.join(DATA_DIR, "fetched.json");       // agreement=true 限定
-const FETCHED_ALL = path.join(DATA_DIR, "fetched_all.json");   // 全件
+const FETCHED     = path.join(DATA_DIR, "fetched.json");
+const FETCHED_ALL = path.join(DATA_DIR, "fetched_all.json");
 const PREVIOUS    = path.join(DATA_DIR, "previous.json");
 
-// ===== diff サイズ取得 =====
+// ===== utils =====
 async function getDiffSize() {
   const ok = await exists(DIFF_JSON);
   if (!ok) return 0;
@@ -69,18 +61,11 @@ async function getDiffSize() {
   } catch { return 0; }
 }
 
-// ===== 差分0フォールバック: previous.json 全件を diff に採用 =====
 async function fallbackUsePreviousAsDiff({ onlyIds = null } = {}) {
   const hasPrev = await exists(PREVIOUS);
-  if (!hasPrev) {
-    console.log("🔴 PLACEHOLDER_ALL: previous.json がありません");
-    return 0;
-  }
+  if (!hasPrev) { console.log("🔴 PLACEHOLDER_ALL: previous.json がありません"); return 0; }
   let prevArr = await readJSON(PREVIOUS, []);
-  if (!Array.isArray(prevArr) || prevArr.length === 0) {
-    console.log("🔴 PLACEHOLDER_ALL: previous.json が空です");
-    return 0;
-  }
+  if (!Array.isArray(prevArr) || prevArr.length === 0) { console.log("🔴 PLACEHOLDER_ALL: previous.json が空です"); return 0; }
   if (onlyIds && onlyIds.size > 0) {
     prevArr = prevArr.filter(it => {
       const id = it?.id_code || it?.acf?.id_code || it?.title?.raw;
@@ -97,7 +82,6 @@ async function fallbackUsePreviousAsDiff({ onlyIds = null } = {}) {
 (async () => {
   try {
     console.log(`MODE=${MODE}`);
-
     const idFilter = parseIdFilter();
     let shouldSkipBuild = false;
 
@@ -107,12 +91,9 @@ async function fallbackUsePreviousAsDiff({ onlyIds = null } = {}) {
       const mod = await import("./fetch-id-info.mjs");
       const fetchFn = mod.runFetch || mod.fetchData || mod.default;
       console.log("[main] using fetch function:", fetchFn && fetchFn.name);
-      if (typeof fetchFn !== "function") {
-        throw new TypeError("fetch module does not export a callable function (expected runFetch / fetchData / default).");
-      }
+      if (typeof fetchFn !== "function") throw new TypeError("fetch module does not export a callable function (expected runFetch / fetchData / default).");
       await fetchFn();
 
-      // fetch 結果からのスキップ判定
       const hasDiff = await exists(DIFF_JSON);
       if (!hasDiff && await exists(SKIP_FLAG)) {
         console.log("skip: skip.flag detected (no eligible records).");
@@ -122,7 +103,7 @@ async function fallbackUsePreviousAsDiff({ onlyIds = null } = {}) {
       }
     }
 
-    // 2) diff（明示 or all/build 時）
+    // 2) diff
     if (!shouldSkipBuild && (MODE === "diff" || MODE === "all" || MODE === "build")) {
       section("2) diff");
       const { extractDiff } = await import("./create-diff.mjs");
@@ -131,21 +112,16 @@ async function fallbackUsePreviousAsDiff({ onlyIds = null } = {}) {
       let cnt = await getDiffSize();
       console.log(`diff size: ${cnt}`);
 
-      // 差分0 → フォールバック（恒常化: 全件プレースホルダー再生成）
       if (cnt === 0 && PLACEHOLDER_ALL) {
         const used = await fallbackUsePreviousAsDiff({ onlyIds: idFilter });
         if (used > 0) {
           cnt = used;
-        } else {
-          // previous が空なら fetched を試す（保険）
-          const hasFetched = await exists(FETCHED);
-          if (hasFetched) {
-            const arr = await readJSON(FETCHED, []);
-            if (Array.isArray(arr) && arr.length > 0) {
-              await atomicWrite(DIFF_JSON, arr);
-              console.log(`🟢 PLACEHOLDER_ALL: fetched.json から ${arr.length} 件を diff.json に投入`);
-              cnt = arr.length;
-            }
+        } else if (await exists(FETCHED)) {
+          const arr = await readJSON(FETCHED, []);
+          if (Array.isArray(arr) && arr.length > 0) {
+            await atomicWrite(DIFF_JSON, arr);
+            console.log(`🟢 PLACEHOLDER_ALL: fetched.json から ${arr.length} 件を diff.json に投入`);
+            cnt = arr.length;
           }
         }
       }
@@ -171,7 +147,6 @@ async function fallbackUsePreviousAsDiff({ onlyIds = null } = {}) {
 
       if (process.env.USE_GH_API === "1") {
         const { pushViaGitHubAPI } = await import("./push-via-github-api.mjs");
-
         const diffRaw  = await fs.readFile(DIFF_JSON, "utf-8").catch(() => "[]");
         let diffArr = [];
         try { diffArr = JSON.parse(diffRaw || "[]"); } catch {}
@@ -184,7 +159,6 @@ async function fallbackUsePreviousAsDiff({ onlyIds = null } = {}) {
               })
               .filter(Boolean)
           : [];
-
         const jsonPaths = ["data/previous.json","data/fetched.json","data/diff.json"];
         await pushViaGitHubAPI({ jsonPaths, htmlPaths });
       }
@@ -194,7 +168,6 @@ async function fallbackUsePreviousAsDiff({ onlyIds = null } = {}) {
       }
     }
 
-    // 単体モード（fetch/diff/generate/reflect のみ実行した場合）もここで終了
     console.log("\nDONE: steps finished.");
   } catch (err) {
     console.error("FATAL:", err?.stack || err);
