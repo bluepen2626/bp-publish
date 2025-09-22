@@ -1,43 +1,48 @@
-// scripts/force-placeholder.mjs
 import fs from "fs/promises";
 import path from "path";
-import { fileURLToPath } from "url";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname  = path.dirname(__filename);
-const DATA_DIR   = path.resolve(__dirname, "..", "data");
-const OUT_DIR    = path.resolve(__dirname, "..", "output");
-const FETCHED_ALL= path.join(DATA_DIR, "fetched_all.json");
-const DIFF_JSON  = path.join(DATA_DIR, "diff.json");
+const DATA = path.resolve("data");
+const OUT  = path.resolve("output");
+const PREV = path.join(DATA, "previous.json");
+const DIFF = path.join(DATA, "diff.json");
 
-const LIMIT = Math.max(1, parseInt(process.env.PLACEHOLDER_LIMIT || "100", 10) || 100);
+const atomicWrite = async (p, content) => {
+  const tmp = p + `.tmp-${Date.now()}-${process.pid}`;
+  await fs.writeFile(tmp, typeof content === "string" ? content : JSON.stringify(content, null, 2), "utf8");
+  await fs.rename(tmp, p);
+};
 
-async function exists(p){ try { await fs.access(p); return true; } catch { return false; } }
+const exists = async p => { try { await fs.access(p); return true; } catch { return false; } };
 
 (async () => {
-  const allStr = await fs.readFile(FETCHED_ALL, "utf8").catch(()=>null);
-  if (!allStr) { console.error("missing fetched_all.json"); process.exit(2); }
-  let all = [];
-  try { all = JSON.parse(allStr); } catch(e){ console.error("JSON parse error:", e.message); process.exit(2); }
+  try {
+    if (!(await exists(PREV))) { console.error("❌ data/previous.json がありません"); process.exit(1); }
+    const prevRaw = await fs.readFile(PREV, "utf8");
+    const arr = JSON.parse(prevRaw || "[]");
+    if (!Array.isArray(arr) || arr.length === 0) { console.error("❌ previous.json が空です"); process.exit(1); }
 
-  const cand = all.filter(x=>{
-    const acf  = x?.acf || {};
-    const id   = x?.id_code ?? acf.id_code;
-    const code = x?.random_url_code ?? acf.random_url_code;
-    const use  = x?.use_case ?? acf.use_case;
-    return use === "placeholder" && id && code;
-  });
+    // ID/CODEバリデーション（大文字OK）
+    const ok = a => /^[0-9]{6}$/.test(String(a?.acf?.id_code ?? a?.id_code ?? "")) &&
+                     /^[A-Za-z0-9]{24}$/.test(String(a?.acf?.random_url_code ?? a?.random_url_code ?? ""));
 
-  const targets = [];
-  for (const it of cand) {
-    const acf  = it?.acf || {};
-    const id   = it?.id_code ?? acf.id_code;
-    const code = it?.random_url_code ?? acf.random_url_code;
-    const outPath = path.join(OUT_DIR, `${id}-${code}.html`);
-    if (!(await exists(outPath))) targets.push(it);
+    const filtered = arr.filter(ok);
+    if (filtered.length === 0) { console.error("❌ 有効なID/CODEがありません"); process.exit(1); }
+
+    await atomicWrite(DIFF, filtered);
+    try { await fs.rm(path.join(DATA,"skip.flag"), {force:true}); } catch {}
+
+    console.log(`🟢 force-placeholder: diff.json に ${filtered.length} 件投入`);
+
+    // 生成→反映
+    const { generateHtmlForDiff } = await import("./generate-html.mjs");
+    await generateHtmlForDiff();
+
+    const { reflectToOutput } = await import("./sync-output.mjs");
+    await reflectToOutput();
+
+    console.log("✅ force-placeholder: generate/reflect 完了");
+  } catch (e) {
+    console.error("FATAL:", e?.stack || e);
+    process.exit(1);
   }
-
-  const sliced = targets.slice(0, LIMIT);
-  await fs.writeFile(DIFF_JSON, JSON.stringify(sliced, null, 2));
-  console.log(`diff.json written: ${sliced.length} items (limit=${LIMIT})`);
 })();
