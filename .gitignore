@@ -25,3 +25,11 @@ node_modules/
 Thumbs.db
 .vscode/
 .idea/
+data/*.bak
+data/fetched_all.json
+data/fetched_all.json.bak
+data/previous.json.bak
+logs/
+output-diff/
+*.tmp-*
+scripts/*.bak.*
