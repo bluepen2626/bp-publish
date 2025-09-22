@@ -2,9 +2,11 @@
   "name": "render-project",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=18.0.0" },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
-    "start": "node scripts/main.mjs",
+    "start": "PLACEHOLDER_ALL=1 node scripts/main.mjs",
     "build": "node scripts/main.mjs build",
     "fetch": "node scripts/main.mjs fetch",
     "diag": "node scripts/diag.mjs",
